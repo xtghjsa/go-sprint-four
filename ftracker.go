@@ -11,7 +11,6 @@ const (
 	mInKm     = 1000  // количество метров в километре.
 	minInH    = 60    // количество минут в часе.
 	kmhInMsec = 0.278 // коэффициент для преобразования км/ч в м/с.
-	cmInM     = 100   // количество сантиметров в метре.
 )
 
 // distance возвращает дистанцию(в километрах), которую преодолел пользователь за время тренировки.
@@ -106,9 +105,8 @@ func WalkingSpentCalories(action int, duration, weight, height float64) float64 
 
 // Константы для расчета калорий, расходуемых при плавании.
 const (
-	swimmingLenStep                  = 1.38 // длина одного гребка.
-	swimmingCaloriesMeanSpeedShift   = 1.1  // среднее количество сжигаемых колорий при плавании относительно скорости.
-	swimmingCaloriesWeightMultiplier = 2    // множитель веса при плавании.
+	swimmingCaloriesMeanSpeedShift   = 1.1 // среднее количество сжигаемых колорий при плавании относительно скорости.
+	swimmingCaloriesWeightMultiplier = 2   // множитель веса при плавании.
 )
 
 // swimmingMeanSpeed возвращает среднюю скорость при плавании.
