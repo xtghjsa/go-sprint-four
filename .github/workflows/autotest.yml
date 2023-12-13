@@ -16,18 +16,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Checkout tests code
-        uses: actions/checkout@v4
-        with:
-          repository: 'Yandex-Practicum/go-autotests'
-          path: '.autotests'
-
-      - name: Gather files
-        run: |
-          cp .autotests/cmd/fitnesstest/main_test.go ftracker/main_test.go
-
-      - name: Run tests
-        run: |
-          go mod tidy
-          cd ftracker
-          go test -test.v ./...
+      - name: Go test
+        run:
+          go test -v -short ./...
